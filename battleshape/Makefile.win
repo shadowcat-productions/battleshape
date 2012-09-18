@@ -1,0 +1,108 @@
+# Project: battleshape
+# Makefile created by Dev-C++ 4.9.9.2
+
+CPP  = g++.exe
+CC   = gcc.exe
+WINDRES = windres.exe
+RES  = 
+OBJ  = main.o ViewPort.o Camera.o World.o Vector.o Player.o Shot.o MouseHandler.o Timer.o Drone.o GameHandler.o bmp.o Particle.o Nuke.o Upgrade.o Text.o Explosion.o Particle2.o FragMine.o Propulsion.o Torus.o Factory.o FragBoss.o Healthbar.o Menus.o SoundManager.o Sounds.o $(RES)
+LINKOBJ  = main.o ViewPort.o Camera.o World.o Vector.o Player.o Shot.o MouseHandler.o Timer.o Drone.o GameHandler.o bmp.o Particle.o Nuke.o Upgrade.o Text.o Explosion.o Particle2.o FragMine.o Propulsion.o Torus.o Factory.o FragBoss.o Healthbar.o Menus.o SoundManager.o Sounds.o $(RES)
+LIBS =  -L"C:/Dev-Cpp/lib" -lglut32 -lglu32 -lopengl32 -lwinmm -lgdi32 -lfmod  
+INCS =  -I"C:/Dev-Cpp/include" 
+CXXINCS =  -I"C:/Dev-Cpp/lib/gcc/mingw32/3.4.2/include"  -I"C:/Dev-Cpp/include/c++/3.4.2/backward"  -I"C:/Dev-Cpp/include/c++/3.4.2/mingw32"  -I"C:/Dev-Cpp/include/c++/3.4.2"  -I"C:/Dev-Cpp/include" 
+BIN  = BattleShape.exe
+CXXFLAGS = $(CXXINCS)  
+CFLAGS = $(INCS)  
+RM = rm -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before BattleShape.exe all-after
+
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o "BattleShape.exe" $(LIBS)
+
+main.o: main.cpp
+	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)
+
+ViewPort.o: ViewPort.cpp
+	$(CPP) -c ViewPort.cpp -o ViewPort.o $(CXXFLAGS)
+
+Camera.o: Camera.cpp
+	$(CPP) -c Camera.cpp -o Camera.o $(CXXFLAGS)
+
+World.o: World.cpp
+	$(CPP) -c World.cpp -o World.o $(CXXFLAGS)
+
+Vector.o: Vector.cpp
+	$(CPP) -c Vector.cpp -o Vector.o $(CXXFLAGS)
+
+Player.o: Player.cpp
+	$(CPP) -c Player.cpp -o Player.o $(CXXFLAGS)
+
+Shot.o: Shot.cpp
+	$(CPP) -c Shot.cpp -o Shot.o $(CXXFLAGS)
+
+MouseHandler.o: MouseHandler.cpp
+	$(CPP) -c MouseHandler.cpp -o MouseHandler.o $(CXXFLAGS)
+
+Timer.o: Timer.cpp
+	$(CPP) -c Timer.cpp -o Timer.o $(CXXFLAGS)
+
+Drone.o: Drone.cpp
+	$(CPP) -c Drone.cpp -o Drone.o $(CXXFLAGS)
+
+GameHandler.o: GameHandler.cpp
+	$(CPP) -c GameHandler.cpp -o GameHandler.o $(CXXFLAGS)
+
+bmp.o: bmp.cpp
+	$(CPP) -c bmp.cpp -o bmp.o $(CXXFLAGS)
+
+Particle.o: Particle.cpp
+	$(CPP) -c Particle.cpp -o Particle.o $(CXXFLAGS)
+
+Nuke.o: Nuke.cpp
+	$(CPP) -c Nuke.cpp -o Nuke.o $(CXXFLAGS)
+
+Upgrade.o: Upgrade.cpp
+	$(CPP) -c Upgrade.cpp -o Upgrade.o $(CXXFLAGS)
+
+Text.o: Text.cpp
+	$(CPP) -c Text.cpp -o Text.o $(CXXFLAGS)
+
+Explosion.o: Explosion.cpp
+	$(CPP) -c Explosion.cpp -o Explosion.o $(CXXFLAGS)
+
+Particle2.o: Particle2.cpp
+	$(CPP) -c Particle2.cpp -o Particle2.o $(CXXFLAGS)
+
+FragMine.o: FragMine.cpp
+	$(CPP) -c FragMine.cpp -o FragMine.o $(CXXFLAGS)
+
+Propulsion.o: Propulsion.cpp
+	$(CPP) -c Propulsion.cpp -o Propulsion.o $(CXXFLAGS)
+
+Torus.o: Torus.cpp
+	$(CPP) -c Torus.cpp -o Torus.o $(CXXFLAGS)
+
+Factory.o: Factory.cpp
+	$(CPP) -c Factory.cpp -o Factory.o $(CXXFLAGS)
+
+FragBoss.o: FragBoss.cpp
+	$(CPP) -c FragBoss.cpp -o FragBoss.o $(CXXFLAGS)
+
+Healthbar.o: Healthbar.cpp
+	$(CPP) -c Healthbar.cpp -o Healthbar.o $(CXXFLAGS)
+
+Menus.o: Menus.cpp
+	$(CPP) -c Menus.cpp -o Menus.o $(CXXFLAGS)
+
+SoundManager.o: SoundManager.cpp
+	$(CPP) -c SoundManager.cpp -o SoundManager.o $(CXXFLAGS)
+
+Sounds.o: Sounds.cpp
+	$(CPP) -c Sounds.cpp -o Sounds.o $(CXXFLAGS)
